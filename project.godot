@@ -49,5 +49,5 @@ jump={
 
 [physics]
 
-3d/default_gravity=9.799999999999997
+3d/default_gravity=20.0
 3d/default_gravity_vector=Vector3(0, 0, 0)
