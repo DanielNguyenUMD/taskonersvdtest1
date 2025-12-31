@@ -1,16 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhwvkye0o8uwi"]
 
-[ext_resource type="PackedScene" uid="uid://bl1abdlwirg31" path="res://player/projectile/projectile_model.glb" id="1_oxaau"]
-[ext_resource type="Shader" uid="uid://b4wc5wsyakc0a" path="res://player/projectile/projectile.gdshader" id="2_ok7e5"]
+[ext_resource type="PackedScene" uid="uid://bl1abdlwirg31" path="res://player/projectile/projectile_model.glb" id="1_ok7e5"]
+[ext_resource type="Shader" uid="uid://b4wc5wsyakc0a" path="res://player/projectile/projectile.gdshader" id="2_msakg"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_msakg"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dumir"]
 render_priority = 0
-shader = ExtResource("2_ok7e5")
-shader_parameter/tail_color = Color(0.981044, 0.5810575, 0.2923179, 1)
-shader_parameter/head_color = Color(0.8265981, 0.32160774, 0.12698981, 1)
+shader = ExtResource("2_msakg")
+shader_parameter/tail_color = Color(0.7510767, 0.40578583, 0.17819116, 1)
+shader_parameter/head_color = Color(0.89950716, 0.30496538, 0.15230349, 1)
 
-[node name="projectile_model" instance=ExtResource("1_oxaau")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[node name="Projectile3D" instance=ExtResource("1_ok7e5")]
 
 [node name="Projectile" parent="." index="0"]
-material_override = SubResource("ShaderMaterial_msakg")
+material_override = SubResource("ShaderMaterial_dumir")
