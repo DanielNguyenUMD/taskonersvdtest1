@@ -10,6 +10,7 @@ shader_parameter/tail_color = Color(0.7510767, 0.40578583, 0.17819116, 1)
 shader_parameter/head_color = Color(0.89950716, 0.30496538, 0.15230349, 1)
 
 [node name="Projectile3D" instance=ExtResource("1_ok7e5")]
+transform = Transform3D(-0.08715577, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, -0.08715577, 0, 0, 0)
 
 [node name="Projectile" parent="." index="0"]
 material_override = SubResource("ShaderMaterial_dumir")

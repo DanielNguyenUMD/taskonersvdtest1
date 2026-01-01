@@ -47,6 +47,17 @@ func _physics_process(delta):
 	#END JUMP/FALL
 	
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("Shoot"):
+		print("test")
+		shoot_bullet()
+	
+func shoot_bullet():
+	const BULLET3D = preload("res://bullet_3d.tscn")
+	var new_bullet = BULLET3D.instantiate()
+	%Marker3D.add_child(new_bullet)
+	
+	new_bullet.global_transform = %Marker3D.global_transform
 		
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4mriqfmgbocs"]
+[gd_scene load_steps=6 format=3 uid="uid://b4mriqfmgbocs"]
 
-[ext_resource type="PackedScene" uid="uid://dexo37vqifhhy" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://dexo37vqifhhy" path="res://Scenes/player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://bos7rridjkps1" path="res://level/checkboard.png" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://cuyh8hew637ju" path="res://player/reticle.png" id="3_feb5d"]
 
 [sub_resource type="Environment" id="Environment_80nbo"]
 background_mode = 1
@@ -37,3 +38,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.8660255, 0.50000006, 0, -0.50000006, 0.8660255, 0, 9.1, 10.6)
+
+[node name="Reticle" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.25
+offset_top = -17.25
+offset_right = 17.25
+offset_bottom = 17.25
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_feb5d")
+expand_mode = 1
