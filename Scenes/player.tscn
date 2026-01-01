@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dexo37vqifhhy"]
+[gd_scene load_steps=5 format=3 uid="uid://dexo37vqifhhy"]
 
 [ext_resource type="PackedScene" uid="uid://chjrhhjvxun3r" path="res://player/simple_gun/gun_model.glb" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://qn170akjntot" path="res://Scripts/player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://b1lrh2tfuwtpc" path="res://bullet_3d.tscn" id="3_6t5aa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -14,6 +15,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4325708, 0)
 
 [node name="gun_model" parent="Camera3D" instance=ExtResource("1_4flbx")]
 transform = Transform3D(-0.54999995, 0, 4.8082526e-08, 0, 0.55, 0, -4.8082523e-08, 0, -0.55, 0.55821973, -0.18105304, -0.58456606)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D"]
+transform = Transform3D(0.99999994, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, 0.59047747, -0.15623987, -0.88843846)
+visible = false
+
+[node name="Bullet3D" parent="Camera3D/Marker3D" instance=ExtResource("3_6t5aa")]
+transform = Transform3D(-0.069459274, 0, 0.39392307, 0, 0.4, 0, -0.3939231, 0, -0.06945928, 0.59047747, 1.276331, -0.88843846)
+top_level = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

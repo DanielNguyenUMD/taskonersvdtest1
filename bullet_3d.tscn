@@ -1,5 +1,14 @@
-[gd_scene format=3 uid="uid://b1lrh2tfuwtpc"]
+[gd_scene load_steps=3 format=3 uid="uid://b1lrh2tfuwtpc"]
+
+[ext_resource type="PackedScene" uid="uid://bhwvkye0o8uwi" path="res://projectile_3d.tscn" id="1_y2jmw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1ljip"]
 
 [node name="Bullet3D" type="Area3D"]
+transform = Transform3D(-0.06945928, 0, 0.3939231, 0, 0.4, 0, -0.3939231, 0, -0.06945928, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+shape = SubResource("SphereShape3D_1ljip")
+
+[node name="Projectile3D" parent="." instance=ExtResource("1_y2jmw")]
